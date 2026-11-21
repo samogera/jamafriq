@@ -22,12 +22,15 @@
 <meta property="og:url" content="https://www.jamafriqglobal.com/terms.html">
 <meta property="og:locale" content="en_KE">
 <meta property="og:image" content="https://www.jamafriqglobal.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jamafriq Global Consultancy: IELTS coaching and global placement, Kenya">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Terms of Service | Jamafriq Global">
 <meta name="twitter:description" content="Terms governing use of jamafriqglobal.com and Jamafriq Global Consultancy&#x27;s IELTS coaching, placement, visa support and mentorship services in Kenya.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:image" content="https://www.jamafriqglobal.com/assets/og-image.jpg">
+<link rel="preload" href="assets/fonts/manrope.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="css/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -77,7 +80,7 @@
 <h2>8. Intellectual property</h2><p>Course materials, practice tests, model answers and Site content are owned by Jamafriq or our licensors and are for your personal study only. They may not be copied, shared or resold. IELTS and partner names and logos belong to their respective owners.</p>
 <h2>9. Reviews and user content</h2><p>By submitting a review you grant us a non-exclusive licence to publish it, with your first name and band score if provided, on the Site and in our marketing. We may edit for length and remove content that is inaccurate or offensive.</p>
 <h2>10. Limitation of liability</h2><p>To the extent permitted by Kenyan law, our total liability for any claim arising from our services is limited to the fees you paid to us for the service concerned. We are not liable for indirect losses, including lost opportunities, travel costs or third-party fees.</p>
-<h2>11. Third-party links</h2><p>The Site links to WhatsApp, Google Maps, partner websites and social networks. Those services have their own terms and privacy practices, which we do not control.</p>
+<h2>11. Third-party links</h2><p>The Site links to WhatsApp, partner websites and social networks. Those services have their own terms and privacy practices, which we do not control.</p>
 <h2>12. Changes</h2><p>We may update these Terms. The effective date above shows the latest version. Continued use of the Site after a change means you accept the updated Terms.</p>
 <h2>13. Governing law</h2><p>These Terms are governed by the laws of the Republic of Kenya. Disputes will first be addressed through good-faith discussion; failing that, the courts of Kenya have jurisdiction.</p>
 <h2>14. Contact</h2><p>Questions about these Terms: {EMAIL} or WhatsApp {PHONE}.</p>
@@ -102,7 +105,7 @@
     <div class="foot-grid">
       <div>
         <a class="foot-brand" href="index.html"><img src="assets/logo.png" alt="" width="44" height="44">Jamafriq Global</a>
-        <p>Bridging the gap between dreams and reality since 2021. Kenya's premier IELTS coaching and global placement consultancy, officially registered.</p>
+        <p>Bridging the gap between dreams and reality since 2021. IELTS coaching and global placement consultancy, registered in Kenya.</p>
         <div class="social"><a href="https://www.facebook.com/Jamafriq1" rel="noopener me" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a><a href="https://www.instagram.com/Jamafriq1" rel="noopener me" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://x.com/Jamafriq1" rel="noopener me" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8 10h-6.3l-4.9-6.4L4.7 21h-3l7.5-8.6L1.5 3h6.4l4.4 5.9zm-1.1 16h1.7L7 4.7H5.2z"/></svg></a></div>
       </div>
       <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="mentorship.html">Mentorship</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
@@ -121,6 +124,12 @@
 </div>
 <script>
 (function(){
+  function say(el,msg,err){el.style.display='block';el.classList.toggle('err',!!err);if(err){el.textContent=msg;}else{el.innerHTML=msg;}}
+  function okPhone(p){var d=p.replace(/\D/g,'');return d.length>=9&&d.length<=15;}
+  function gate(fm,el){var c=fm.querySelector('[name=consent]');if(c&&!c.checked){say(el,'Please tick the consent box to continue.',1);c.focus();return true;}
+    var bt=fm.querySelector('[type=submit]');if(bt.disabled)return true;bt.disabled=true;setTimeout(function(){bt.disabled=false;},2500);return false;}
+  function mk(fm){var m=fm.querySelector('[name=marketing]');return m?' WhatsApp updates: '+(m.checked?'yes':'no')+'.':'';}
+  function link(t,label){return '<a class="btn btn-navy wa-go" href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">'+label+'</a>';}
   var b=document.getElementById('menuBtn'),m=document.getElementById('menu');
   if(b){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');document.body.classList.toggle('menu-open',o);});
     m.addEventListener('click',function(e){if(e.target.closest('a')){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');}});
@@ -132,11 +141,12 @@
     var shc=function(){document.getElementById('w-country').hidden=(cs2.value!=='other');};cs2.addEventListener('change',shc);shc();
     var af=document.getElementById('appForm'),ao=document.getElementById('appOk');
     af.addEventListener('submit',function(e){e.preventDefault();var n=af.name.value.trim(),p=af.phone.value.trim();
-      if(!n||!p){ao.style.display='block';ao.textContent='Please add your name and WhatsApp number.';return;}
+      if(!n||!okPhone(p)){say(ao,'Please add your name and a valid WhatsApp number.',1);return;}
+      if(gate(af,ao))return;
       var ref={none:'none',alumni:'alumnus '+af.alumni.value.trim(),partner:'partner '+(af.partner.value==='other'?af.partnerOther.value.trim():af.partner.value),other:af.other.value.trim()}[rt.value];
       var dest=af.country.value==='other'?af.countryOther.value.trim():af.country.value;
-      var t='Course application. Name: '+n+' ('+p+'). Course: '+af.course.value+'. Test: '+af.test.value+'. Target band: '+af.target.value+'. Destination: '+dest+'. Referred by: '+ref+'. Notes: '+af.message.value.trim();
-      ao.style.display='block';ao.innerHTML='Your application is ready. <a href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">Open WhatsApp to send it →</a>';});}
+      var t='Course application. Name: '+n+' ('+p+'). Course: '+af.course.value+'. Test: '+af.test.value+'. Target band: '+af.target.value+'. Destination: '+dest+'. Referred by: '+ref+'. Notes: '+af.message.value.trim()+mk(af);
+      say(ao,'Your application is ready. Tap below to send it on WhatsApp.<br>'+link(t,'Open WhatsApp →'));});}
   var now=Date.now();
   document.querySelectorAll('[data-until]').forEach(function(el){var t=Date.parse(el.dataset.until);if(!isNaN(t)&&now>=t){el.hidden=true;}});
   var nb=document.getElementById('notice');
@@ -159,19 +169,21 @@
     requestAnimationFrame(step);});},{threshold:.4});nums.forEach(function(n){io.observe(n);});}
   var rf=document.getElementById('revForm');
   if(rf){var ro=document.getElementById('revOk');rf.addEventListener('submit',function(e){e.preventDefault();var n=rf.name.value.trim(),x=rf.text.value.trim();
-    if(!n||!x){ro.style.display='block';ro.textContent='Please add your name and your review.';return;}
+    if(!n||!x){say(ro,'Please add your name and your review.',1);return;}
+    if(gate(rf,ro))return;
     var t='New review from '+n+(rf.band.value?' (Band '+rf.band.value+')':'')+'. Service: '+rf.course.value+'. Review: "'+x+'"';
-    ro.style.display='block';ro.innerHTML='Thank you! <a href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">Open WhatsApp to send your review →</a>';});}
+    say(ro,'Thank you! Tap below to send your review on WhatsApp.<br>'+link(t,'Open WhatsApp →'));});}
   var f=document.getElementById('leadForm');
   if(f){var ok=document.getElementById('formOk');
-    var pre={'study-abroad':['Study abroad placement','Tell us your preferred country and course and we will shortlist institutions.'],'work-abroad':['Work abroad placement','Tell us your profession and preferred country and we will match you with employers.'],'visa':['Visa assistance','Tell us which visa you are applying for and where you are in the process.'],'pre-departure':['Pre-departure briefing','Tell us your destination and travel date.'],'scholarship':['Scholarship guidance','Tell us your course, level and preferred country.'],'ielts':['IELTS preparation','Tell us your target band and test date if booked.'],'mentorship':['Mentorship programme','Tell us the participant’s age and what they hope to gain.']};
+    var pre={'study-abroad':['Study abroad placement','Tell us your preferred country and course and we will shortlist institutions.'],'work-abroad':['Work abroad placement','Tell us your profession and preferred country and we will match you with employers.'],'visa':['Visa assistance','Tell us which visa you are applying for and where you are in the process.'],'pre-departure':['Pre-departure briefing','Tell us your destination and travel date.'],'scholarship':['Scholarship guidance','Tell us your course, level and preferred country.'],'ielts':['IELTS preparation','Tell us your target band and test date if booked.'],'mentorship':['Mentorship programme','Parent or guardian: tell us the participant’s age range and what they hope to gain.']};
     var key=(location.hash||'').replace('#','')||new URLSearchParams(location.search).get('service')||'';
     if(pre[key]){f.goal.value=key;document.getElementById('formTitle').textContent=pre[key][0];document.getElementById('formSub').textContent=pre[key][1];f.subject.placeholder=pre[key][0]+': ';setTimeout(function(){f.subject.focus();},200);}
     f.goal.addEventListener('change',function(){var k=f.goal.value;if(pre[k]){document.getElementById('formTitle').textContent=pre[k][0];document.getElementById('formSub').textContent=pre[k][1];}else{document.getElementById('formTitle').textContent='Send an enquiry';document.getElementById('formSub').textContent='Choose a service and tell us your goal.';}});f.addEventListener('submit',function(e){e.preventDefault();
     var n=f.name.value.trim(),p=f.phone.value.trim();
-    if(!n||!p){ok.style.display='block';ok.textContent='Please add your name and WhatsApp number.';return;}
-    var t='Hello Jamafriq Global, my name is '+n+' ('+p+'). Service: '+f.goal.options[f.goal.selectedIndex].text+'. Subject: '+(f.subject?f.subject.value.trim():'')+'. Start: '+(f.when?f.when.value:'')+'. '+f.message.value.trim();
-    ok.style.display='block';ok.innerHTML='Your enquiry is ready. <a href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">Open WhatsApp to send it →</a>';});}
+    if(!n||!okPhone(p)){say(ok,'Please add your name and a valid WhatsApp number.',1);return;}
+    if(gate(f,ok))return;
+    var t='Hello Jamafriq Global, my name is '+n+' ('+p+'). Service: '+f.goal.options[f.goal.selectedIndex].text+'. Subject: '+(f.subject?f.subject.value.trim():'')+'. Start: '+(f.when?f.when.value:'')+'. '+f.message.value.trim()+mk(f);
+    say(ok,'Your enquiry is ready. Tap below to send it on WhatsApp.<br>'+link(t,'Open WhatsApp →'));});}
 })();
 </script>
 </body>

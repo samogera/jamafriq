@@ -22,12 +22,15 @@
 <meta property="og:url" content="https://www.jamafriqglobal.com/contact.html">
 <meta property="og:locale" content="en_KE">
 <meta property="og:image" content="https://www.jamafriqglobal.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jamafriq Global Consultancy: IELTS coaching and global placement, Kenya">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Jamafriq Global | Free IELTS &amp; Placement Consultation">
 <meta name="twitter:description" content="Book a free consultation with Jamafriq Global Consultancy. WhatsApp +254 721 776 745 or email jmsorwa4@gmail.com. Open Monday to Friday and Sundays.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:image" content="https://www.jamafriqglobal.com/assets/og-image.jpg">
+<link rel="preload" href="assets/fonts/manrope.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="css/site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -67,7 +70,7 @@
 <section style="padding-top:0"><div class="wrap">
   <div class="contact-hero">
     <svg class="squiggle" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 40c120 180 60 260 180 300s250-30 300 120M60 10c160 120 320 100 420 300s-60 180-120 160" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-    <a class="ctile" href="https://wa.me/254721776745" rel="noopener"><small>WhatsApp · fastest</small><b>+254 721 776 745</b><span>Tap to open a chat. Also on +254 735 209 491. Replies within one business day.</span></a>
+    <a class="ctile" href="https://wa.me/254721776745" rel="noopener"><small>WhatsApp · fastest</small><b>+254 721 776 745</b><span>Tap to open a chat. Also on +254 735 209 491. We aim to reply within one business day.</span></a>
     <a class="ctile" href="mailto:jmsorwa4@gmail.com"><small>Email</small><b>jmsorwa4@gmail.com</b><span>For documents, transcripts and longer enquiries.</span></a>
     <div class="ctile"><small>Hours · East Africa Time</small><b>Mon–Fri 8:00 am – 5:00 pm</b><span>Sunday open · Saturday closed · Nairobi, Kenya</span></div>
   </div>
@@ -76,20 +79,22 @@
       <h3>What happens next</h3>
       <ol>
         <li><div><b>You send the form</b><span>It opens WhatsApp with your details ready to send.</span></div></li>
-        <li><div><b>We call you back</b><span>A free 20-minute consultation to map your route and the right IELTS test.</span></div></li>
+        <li><div><b>We call you back</b><span>A free consultation to map your route and the right IELTS test.</span></div></li>
         <li><div><b>You get a plan</b><span>Course schedule, start date and, if you are placing, a shortlist of institutions or employers.</span></div></li>
       </ol>
       <div class="hours"><b>Prefer to call?</b><span>+254 721 776 745, Mon–Fri 8 am – 5 pm.</span></div>
     </aside>
     <form class="form" id="leadForm" novalidate>
       <div class="form-head"><b id="formTitle">Send an enquiry</b><span id="formSub">Choose a service and tell us your goal.</span></div>
-      <div class="two"><label for="name">Full name<input id="name" name="name" type="text" autocomplete="name" required></label><label for="phone">WhatsApp number<input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="07xx xxx xxx" required></label></div>
+      <div class="two"><label for="name">Full name<input id="name" name="name" type="text" maxlength="100" autocomplete="name" required></label><label for="phone">WhatsApp number<input id="phone" name="phone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="07xx xxx xxx" required></label></div>
       <div class="two">
         <label for="goal">Service<select id="goal" name="goal"><option value="ielts">IELTS preparation</option><option value="study-abroad">Study abroad placement</option><option value="work-abroad">Work abroad placement</option><option value="visa">Visa assistance</option><option value="pre-departure">Pre-departure briefing</option><option value="scholarship">Scholarship guidance</option><option value="mentorship">Mentorship programme</option><option value="other">Something else</option></select></label>
         <label for="when">When do you want to start?<select id="when" name="when"><option>As soon as possible</option><option>Within a month</option><option>In 1–3 months</option><option>Just exploring</option></select></label>
       </div>
-      <label for="subject">Subject<input id="subject" name="subject" type="text" placeholder="e.g. Nursing job in the UK" required></label>
-      <label for="msg">Tell us about your goal<textarea id="msg" name="message" rows="5" placeholder="Target country, timeline, current English level…"></textarea></label>
+      <label for="subject">Subject<input id="subject" name="subject" type="text" maxlength="100" placeholder="e.g. Nursing job in the UK" required></label>
+      <label for="msg">Tell us about your goal<textarea maxlength="800" id="msg" name="message" rows="5" placeholder="Target country, timeline, current English level…"></textarea></label>
+      <div class="checks"><label class="check" for="l-consent"><input id="l-consent" name="consent" type="checkbox" required><span>I agree that Jamafriq Global may use these details to reply to my enquiry, as described in the <a href="privacy.html">Privacy Policy</a>.</span></label><label class="check" for="l-mk"><input id="l-mk" name="marketing" type="checkbox"><span>Send me occasional WhatsApp updates about new intakes and offers. Optional; reply STOP any time.</span></label></div>
+      <p class="form-warn">Please don’t include ID or passport numbers, or medical details. If documents are needed, we’ll tell you a secure way to share them.</p>
       <button class="btn btn-navy" type="submit" style="justify-self:start">Send enquiry <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8"/></svg></button>
       <p class="form-note">Opens WhatsApp with your message ready to send. No account needed.</p>
       <p class="form-ok" id="formOk" role="status"></p>
@@ -115,7 +120,7 @@
     <div class="foot-grid">
       <div>
         <a class="foot-brand" href="index.html"><img src="assets/logo.png" alt="" width="44" height="44">Jamafriq Global</a>
-        <p>Bridging the gap between dreams and reality since 2021. Kenya's premier IELTS coaching and global placement consultancy, officially registered.</p>
+        <p>Bridging the gap between dreams and reality since 2021. IELTS coaching and global placement consultancy, registered in Kenya.</p>
         <div class="social"><a href="https://www.facebook.com/Jamafriq1" rel="noopener me" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a><a href="https://www.instagram.com/Jamafriq1" rel="noopener me" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://x.com/Jamafriq1" rel="noopener me" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7 8 8 10h-6.3l-4.9-6.4L4.7 21h-3l7.5-8.6L1.5 3h6.4l4.4 5.9zm-1.1 16h1.7L7 4.7H5.2z"/></svg></a></div>
       </div>
       <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="mentorship.html">Mentorship</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
@@ -134,6 +139,12 @@
 </div>
 <script>
 (function(){
+  function say(el,msg,err){el.style.display='block';el.classList.toggle('err',!!err);if(err){el.textContent=msg;}else{el.innerHTML=msg;}}
+  function okPhone(p){var d=p.replace(/\D/g,'');return d.length>=9&&d.length<=15;}
+  function gate(fm,el){var c=fm.querySelector('[name=consent]');if(c&&!c.checked){say(el,'Please tick the consent box to continue.',1);c.focus();return true;}
+    var bt=fm.querySelector('[type=submit]');if(bt.disabled)return true;bt.disabled=true;setTimeout(function(){bt.disabled=false;},2500);return false;}
+  function mk(fm){var m=fm.querySelector('[name=marketing]');return m?' WhatsApp updates: '+(m.checked?'yes':'no')+'.':'';}
+  function link(t,label){return '<a class="btn btn-navy wa-go" href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">'+label+'</a>';}
   var b=document.getElementById('menuBtn'),m=document.getElementById('menu');
   if(b){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');document.body.classList.toggle('menu-open',o);});
     m.addEventListener('click',function(e){if(e.target.closest('a')){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open');}});
@@ -145,11 +156,12 @@
     var shc=function(){document.getElementById('w-country').hidden=(cs2.value!=='other');};cs2.addEventListener('change',shc);shc();
     var af=document.getElementById('appForm'),ao=document.getElementById('appOk');
     af.addEventListener('submit',function(e){e.preventDefault();var n=af.name.value.trim(),p=af.phone.value.trim();
-      if(!n||!p){ao.style.display='block';ao.textContent='Please add your name and WhatsApp number.';return;}
+      if(!n||!okPhone(p)){say(ao,'Please add your name and a valid WhatsApp number.',1);return;}
+      if(gate(af,ao))return;
       var ref={none:'none',alumni:'alumnus '+af.alumni.value.trim(),partner:'partner '+(af.partner.value==='other'?af.partnerOther.value.trim():af.partner.value),other:af.other.value.trim()}[rt.value];
       var dest=af.country.value==='other'?af.countryOther.value.trim():af.country.value;
-      var t='Course application. Name: '+n+' ('+p+'). Course: '+af.course.value+'. Test: '+af.test.value+'. Target band: '+af.target.value+'. Destination: '+dest+'. Referred by: '+ref+'. Notes: '+af.message.value.trim();
-      ao.style.display='block';ao.innerHTML='Your application is ready. <a href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">Open WhatsApp to send it →</a>';});}
+      var t='Course application. Name: '+n+' ('+p+'). Course: '+af.course.value+'. Test: '+af.test.value+'. Target band: '+af.target.value+'. Destination: '+dest+'. Referred by: '+ref+'. Notes: '+af.message.value.trim()+mk(af);
+      say(ao,'Your application is ready. Tap below to send it on WhatsApp.<br>'+link(t,'Open WhatsApp →'));});}
   var now=Date.now();
   document.querySelectorAll('[data-until]').forEach(function(el){var t=Date.parse(el.dataset.until);if(!isNaN(t)&&now>=t){el.hidden=true;}});
   var nb=document.getElementById('notice');
@@ -172,19 +184,21 @@
     requestAnimationFrame(step);});},{threshold:.4});nums.forEach(function(n){io.observe(n);});}
   var rf=document.getElementById('revForm');
   if(rf){var ro=document.getElementById('revOk');rf.addEventListener('submit',function(e){e.preventDefault();var n=rf.name.value.trim(),x=rf.text.value.trim();
-    if(!n||!x){ro.style.display='block';ro.textContent='Please add your name and your review.';return;}
+    if(!n||!x){say(ro,'Please add your name and your review.',1);return;}
+    if(gate(rf,ro))return;
     var t='New review from '+n+(rf.band.value?' (Band '+rf.band.value+')':'')+'. Service: '+rf.course.value+'. Review: "'+x+'"';
-    ro.style.display='block';ro.innerHTML='Thank you! <a href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">Open WhatsApp to send your review →</a>';});}
+    say(ro,'Thank you! Tap below to send your review on WhatsApp.<br>'+link(t,'Open WhatsApp →'));});}
   var f=document.getElementById('leadForm');
   if(f){var ok=document.getElementById('formOk');
-    var pre={'study-abroad':['Study abroad placement','Tell us your preferred country and course and we will shortlist institutions.'],'work-abroad':['Work abroad placement','Tell us your profession and preferred country and we will match you with employers.'],'visa':['Visa assistance','Tell us which visa you are applying for and where you are in the process.'],'pre-departure':['Pre-departure briefing','Tell us your destination and travel date.'],'scholarship':['Scholarship guidance','Tell us your course, level and preferred country.'],'ielts':['IELTS preparation','Tell us your target band and test date if booked.'],'mentorship':['Mentorship programme','Tell us the participant’s age and what they hope to gain.']};
+    var pre={'study-abroad':['Study abroad placement','Tell us your preferred country and course and we will shortlist institutions.'],'work-abroad':['Work abroad placement','Tell us your profession and preferred country and we will match you with employers.'],'visa':['Visa assistance','Tell us which visa you are applying for and where you are in the process.'],'pre-departure':['Pre-departure briefing','Tell us your destination and travel date.'],'scholarship':['Scholarship guidance','Tell us your course, level and preferred country.'],'ielts':['IELTS preparation','Tell us your target band and test date if booked.'],'mentorship':['Mentorship programme','Parent or guardian: tell us the participant’s age range and what they hope to gain.']};
     var key=(location.hash||'').replace('#','')||new URLSearchParams(location.search).get('service')||'';
     if(pre[key]){f.goal.value=key;document.getElementById('formTitle').textContent=pre[key][0];document.getElementById('formSub').textContent=pre[key][1];f.subject.placeholder=pre[key][0]+': ';setTimeout(function(){f.subject.focus();},200);}
     f.goal.addEventListener('change',function(){var k=f.goal.value;if(pre[k]){document.getElementById('formTitle').textContent=pre[k][0];document.getElementById('formSub').textContent=pre[k][1];}else{document.getElementById('formTitle').textContent='Send an enquiry';document.getElementById('formSub').textContent='Choose a service and tell us your goal.';}});f.addEventListener('submit',function(e){e.preventDefault();
     var n=f.name.value.trim(),p=f.phone.value.trim();
-    if(!n||!p){ok.style.display='block';ok.textContent='Please add your name and WhatsApp number.';return;}
-    var t='Hello Jamafriq Global, my name is '+n+' ('+p+'). Service: '+f.goal.options[f.goal.selectedIndex].text+'. Subject: '+(f.subject?f.subject.value.trim():'')+'. Start: '+(f.when?f.when.value:'')+'. '+f.message.value.trim();
-    ok.style.display='block';ok.innerHTML='Your enquiry is ready. <a href="https://wa.me/254721776745?text='+encodeURIComponent(t)+'" rel="noopener">Open WhatsApp to send it →</a>';});}
+    if(!n||!okPhone(p)){say(ok,'Please add your name and a valid WhatsApp number.',1);return;}
+    if(gate(f,ok))return;
+    var t='Hello Jamafriq Global, my name is '+n+' ('+p+'). Service: '+f.goal.options[f.goal.selectedIndex].text+'. Subject: '+(f.subject?f.subject.value.trim():'')+'. Start: '+(f.when?f.when.value:'')+'. '+f.message.value.trim()+mk(f);
+    say(ok,'Your enquiry is ready. Tap below to send it on WhatsApp.<br>'+link(t,'Open WhatsApp →'));});}
 })();
 </script>
 </body>

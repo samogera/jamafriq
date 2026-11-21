@@ -3,6 +3,17 @@
  "trailingSlash": false,
  "redirects": [
   {
+   "source": "/:path*",
+   "has": [
+    {
+     "type": "host",
+     "value": "jamafriqglobal.com"
+    }
+   ],
+   "destination": "https://www.jamafriqglobal.com/:path*",
+   "permanent": true
+  },
+  {
    "source": "/enroll",
    "destination": "/courses.html",
    "permanent": true
